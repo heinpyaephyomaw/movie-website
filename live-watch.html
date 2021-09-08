@@ -99,14 +99,9 @@
         <div class="container-fluid">
             <div class="row">
                 <civ class="col-12 p-0">
-                    <div class="event-banner">
-                        <!-- <a class="video-popup" data-vbtype="iframe" href="https://www.youtube.com/embed/YkcnNbWZjTg">
-                            <span></span>
-                            <i class="ti-control-play"></i>
-                        </a> -->
-                        <video width="100%" height="90%" controls>
-                            <source src="assets/video/aa.mp4" type="video/mp4">
-                        </video>
+                    <div class="event-banner" id="banner">
+                      
+                        
                     </div>
                 </civ>
             </div>
@@ -206,6 +201,22 @@
     <script src="assets/library/swiper/swiper-bundle.min.js"></script>
     <script src="assets/library/venobox/venobox.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        let banner=document.getElementById('banner');
+        fetch ('https://dev.asxox.com.mm/api/streaming-url', {
+            method: 'get',
+          })
+          .then (response => response.json ())
+          .then (json => {
+            console.log('json',json.data);
+            let source=json.data;
+            banner.innerHTML=`<video width="100%" height="90%" controls>
+                <source src="${source}" type="video/mp4">
+            </video>`;
+           
+          });
+    
+    </script>
 </body>
 
 </html>
