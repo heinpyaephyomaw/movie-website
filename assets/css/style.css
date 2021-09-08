@@ -29,12 +29,29 @@ html {
 
 .navbar-parent-background {
     background-color: #040404;
-    /* position: sticky;
-    z-index: 999999;
-    top: 0; */
     border-bottom: 1px solid rgb(117, 117, 117);
 }
+.navbar-navcontainer {
+    position: sticky;
+    z-index: 999999;
+    top: 0;
+    animation: headerDrop 0.4s ease;
+}
 
+@keyframes headerDrop {
+   from {
+     transform: translateY(-100%);
+   }
+   to {
+    transform: translateY(0);
+   }
+}
+.nav-header-name {
+    display: none;
+}
+.logo-image-hide {
+    display: none;
+}
 .nav-bar li a {
     font-weight: bold;
 }
@@ -96,6 +113,7 @@ html {
     left: 0;
     display: none;
     animation: nav_drop_animation 0.2s linear;
+    z-index: 100;
 }
 
 @keyframes nav_drop_animation {
@@ -997,7 +1015,7 @@ html {
     }
     .nav-bar-header-show {
         display: block;
-        animation: navDrop 0.7s linear;
+        animation: navDrop 1s ease;
     }
     .nav-toggle-button {
         border-radius: 0.25rem;
@@ -1006,11 +1024,11 @@ html {
     }
     .nav-toggle-button i {
         color: #FFF;
-        font-size: 30px;
+        font-size: 20px;
     }
     .nav-list-block {
         display: block;
-        margin: 10px 0 0 0 !important;
+        margin: 5px 0 0 0 !important;
         width: 100%;
         background-color: #515151;
     }
@@ -1020,7 +1038,7 @@ html {
     }
     .dropdown {
         z-index: 100;
-        background-color: #000;
+        background-color: #2d2d2d;
         width: 100%;
     }
     .nav-title {
