@@ -944,4 +944,62 @@ html {
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
-/* @media (min-width: 992px) */
+@media (max-width: 420px) {
+   .footer_section{
+       display: none;
+   }
+   .nav-bar-header {
+       display: none !important;
+   }
+   .nav-bar-header-show {
+       display: block;
+       animation: navDrop 0.8s linear;
+       
+   }
+   .nav-toggle-button {
+       border-radius: 0.25rem;
+       background-color: transparent;
+       border: none;
+   }
+   .nav-toggle-button i {
+       color: #FFF;
+       font-size: 30px;
+   }
+   .nav-list-block {
+       display: block;
+       margin: 10px 0 0 0 !important;
+       width: 100%;
+       background-color: #515151;
+   }
+   .nav-list-block li{
+      float: none;
+      width: 100%;
+   }
+   .dropdown {
+       z-index: 100;
+       background-color: #000;
+       width: 100%;
+   }
+   .nav-title {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+   .logo-toggle-button-container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       z-index: 100;
+       width: 100%;
+   }
+
+   @keyframes navDrop {
+       from {
+         transform: translateY(-100%);
+       }
+       to {
+        transform: translateY(0);
+       }
+   }
+
+}

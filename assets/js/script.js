@@ -15,13 +15,11 @@ let swiper = new Swiper(".myswiper", {
 
 
   // video-popup
-  $('.video-popup').venobox({
-    // framewidth : '400px',                            
-    // frameheight: '300px',                         
-    // border     : '10px',                            
-    // bgcolor    : '#5dff5e',                          
-    // titleattr  : 'data-title',                      
-    // numeratio  : true,                              
-    // infinigall : true,                               
-    // share      : ['facebook', 'twitter', 'download'] 
-});
+  $('.video-popup').venobox();
+
+  let navToggleButton = document.querySelector(".nav-toggle-button");
+  let navBar = document.querySelector(".nav-bar");
+  navToggleButton.addEventListener("click",function(){
+    navBar.classList.toggle('nav-bar-header');
+    navBar.classList.toggle('nav-bar-header-show');
+  })
