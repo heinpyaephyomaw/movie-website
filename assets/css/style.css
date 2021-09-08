@@ -28,10 +28,10 @@ html {
 }
 
 .navbar-parent-background {
-    background-color: #04040494;
-    position: sticky;
+    background-color: #040404;
+    /* position: sticky;
     z-index: 999999;
-    top: 0;
+    top: 0; */
     border-bottom: 1px solid rgb(117, 117, 117);
 }
 
