@@ -1063,6 +1063,27 @@ html {
     .footer_section .container .row{
         padding-bottom: 10px !important;
     }
+    .subscribe_card {
+        height: auto;
+    }
+    .footer-bottom .footer-bottom-area {
+    flex-direction: column-reverse;
+    }
+    .footer-bottom .left {
+        margin-bottom: 0;
+    }
+    .footer-bottom .left p {
+        font-size: 80%;
+    }
+    .footer-bottom .links {
+        padding: 0;
+    }
+    .footer-bottom .links li {
+        padding: 0 5px;
+    }
+    .footer-bottom .links li a {
+        font-size: 80%;
+    }
 
 
 
